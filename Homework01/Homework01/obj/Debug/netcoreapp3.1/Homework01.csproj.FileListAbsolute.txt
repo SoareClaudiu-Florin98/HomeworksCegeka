@@ -1,0 +1,13 @@
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\bin\Debug\netcoreapp3.1\Homework01.exe
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\bin\Debug\netcoreapp3.1\Homework01.deps.json
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\bin\Debug\netcoreapp3.1\Homework01.runtimeconfig.json
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\bin\Debug\netcoreapp3.1\Homework01.runtimeconfig.dev.json
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\bin\Debug\netcoreapp3.1\Homework01.dll
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\bin\Debug\netcoreapp3.1\Homework01.pdb
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.csprojAssemblyReference.cache
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.AssemblyInfoInputs.cache
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.AssemblyInfo.cs
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.csproj.CoreCompileInputs.cache
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.dll
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.pdb
+C:\Users\soare\source\repos\HomeworksCegeka\Homework01\Homework01\obj\Debug\netcoreapp3.1\Homework01.genruntimeconfig.cache
