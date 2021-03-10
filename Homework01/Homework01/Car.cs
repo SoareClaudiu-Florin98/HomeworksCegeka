@@ -8,12 +8,15 @@ namespace Homework01
     {
         private String carModel;
         private PackageType packageType;
+        private String packageOptions;
 
-        public Car(String carModel, PackageType packageType)
+        public Car(String carModel, PackageType packageType,String  packageOptions = "" )
         {
             this.carModel = carModel;
-            this.packageType = packageType;          
+            this.packageType = packageType;
+            this.packageOptions = packageOptions; 
         }
+
         
 
         public String CarModel
@@ -39,9 +42,18 @@ namespace Homework01
             }
 
         }
+        public String PackageOptions
+        {
+            get { return packageOptions;  }
+            set
+            {
+                packageOptions = value; 
+
+            }
+        }
         public override string ToString()
         {
-            return "Model " + this.carModel + " \n" + "Package: " + this.packageType + " \n"; 
+            return "Model " + this.carModel  + "  Package: " + this.packageType+"  Options: " +this.packageOptions + " \n "; 
         }
 
 
