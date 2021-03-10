@@ -4,12 +4,11 @@ namespace Homework01
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             while (true)
             {
-                displayMenu();
+                DisplayMenu();
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -50,7 +49,7 @@ namespace Homework01
 
         }
 
-        private static void displayMenu()
+        private static void DisplayMenu()
         {
             Console.WriteLine(" 1. Adauga o noua masina");
             Console.WriteLine(" 2. Afiseaza toate masinile fabricate ");

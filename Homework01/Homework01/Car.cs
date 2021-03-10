@@ -16,9 +16,6 @@ namespace Homework01
             this.packageType = packageType;
             this.packageOptions = packageOptions; 
         }
-
-        
-
         public String CarModel
         {
             get

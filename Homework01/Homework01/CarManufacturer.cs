@@ -8,7 +8,7 @@ namespace Homework01
     static class CarManufacturer
     {
         private static List<Car> cars = new List<Car>();
-        public static PackageType  getPackageType()
+        public static PackageType  GetPackageType()
         {
             DiplayPackageOptions();
             int numberOfPackageType = Convert.ToInt32(Console.ReadLine());
@@ -41,7 +41,7 @@ namespace Homework01
         {
             Console.WriteLine(" Model: ");
             String model = Console.ReadLine();                         
-            Car car = new Car(model,getPackageType()); 
+            Car car = new Car(model,GetPackageType()); 
             cars.Add(car);
         }
         public static void DisplayAllCars()
@@ -53,7 +53,7 @@ namespace Homework01
         }
         public static void AddOptions()
         {
-            PackageType packageType = getPackageType();
+            PackageType packageType = GetPackageType();
             Console.WriteLine("Ce optiuni vreti sa adaugati acestui model ?");
             String options = Console.ReadLine(); 
             foreach(Car car in cars)
