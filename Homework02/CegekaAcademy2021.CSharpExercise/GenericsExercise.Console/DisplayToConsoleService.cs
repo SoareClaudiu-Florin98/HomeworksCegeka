@@ -8,11 +8,20 @@ namespace GenericsExercise.Console
     class DisplayToConsoleService
     {
         public async static void DisplayToConsole<TEntity>(Persistence persistence) where TEntity : IEntity
-        { 
-            var items = await persistence.GetAllAsync<TEntity>();
-            foreach (var item in items)
+        {
+            try
             {
-                System.Console.WriteLine(item.ToString());
+
+                var items = await persistence.GetAllAsync<TEntity>();
+                foreach (var item in items)
+                {
+                    System.Console.WriteLine(item.ToString());
+
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex); 
 
             }
         }

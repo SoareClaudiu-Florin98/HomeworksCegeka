@@ -9,7 +9,17 @@ namespace GenericsExercise.Console
             while(true)
             {
                 DisplayMenu();
-                int choice = Convert.ToInt32(System.Console.ReadLine());
+                int choice;
+                try
+                {
+                    choice = Convert.ToInt32(System.Console.ReadLine());
+
+                }
+                catch
+                {
+                    choice = -1; 
+                }
+                
                 switch (choice)
                 {
                     case 1:
