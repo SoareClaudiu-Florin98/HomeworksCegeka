@@ -5,7 +5,6 @@ namespace GenericsExercise.Console
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello World!");
             while(true)
             {
                 DisplayMenu();
@@ -13,13 +12,12 @@ namespace GenericsExercise.Console
                 try
                 {
                     choice = Convert.ToInt32(System.Console.ReadLine());
-
                 }
                 catch
                 {
                     choice = -1; 
                 }
-                
+               
                 switch (choice)
                 {
                     case 1:
@@ -42,7 +40,6 @@ namespace GenericsExercise.Console
                         break;
                 }
             }
-
 
         }
 
