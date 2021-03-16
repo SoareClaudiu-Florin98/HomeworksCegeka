@@ -7,13 +7,12 @@ namespace GenericsExercise.Console
     class StudentService
     {
         private static Persistence persistence = new Persistence();
-        private static int studentId = 0; 
         public static void InsertStudent()
         {
 
             Student student = new Student();
-            student.Id = studentId.ToString();
-            studentId++;
+            System.Console.WriteLine("Alege un id pentru student : ");
+            student.Id = System.Console.ReadLine(); 
             System.Console.WriteLine("Alege un prenume pentru student : ");
             student.FisrtName = System.Console.ReadLine();
             System.Console.WriteLine("Alege un nume pentru student : ");

@@ -8,13 +8,12 @@ namespace GenericsExercise.Console
     {
 
         private static Persistence persistence = new Persistence();
-        private static long universityId = 0; 
         public static void InsertUniversity()
         {
 
             University university = new University();
-            university.Id = universityId.ToString();
-            universityId++;
+            System.Console.WriteLine("Alege un id pentru student : ");
+            university.Id = System.Console.ReadLine();
             System.Console.WriteLine("Alege un nume pentru universitate : "); 
             university.Name = System.Console.ReadLine();
             System.Console.WriteLine("Alege o adresa pentru universitate : ");
