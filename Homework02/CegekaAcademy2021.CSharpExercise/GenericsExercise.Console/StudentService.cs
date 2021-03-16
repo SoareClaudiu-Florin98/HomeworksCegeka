@@ -19,17 +19,10 @@ namespace GenericsExercise.Console
             student.LastName = System.Console.ReadLine();
             persistence.InsertAsync(student);
 
-
-
         }
-        public  async static void DisplayAllStudents()
+        public   static void DisplayAllStudents()
         {
-            var students = await persistence.GetAllAsync<Student>();
-            foreach (var student in students)
-            {
-                System.Console.WriteLine("Id:  " + student.Id + " Prenume: " + student.FisrtName + " Nume: " + student.LastName);
-
-            }
+            DisplayToConsoleService.DisplayToConsole<Student>( persistence);
         }
 
     }

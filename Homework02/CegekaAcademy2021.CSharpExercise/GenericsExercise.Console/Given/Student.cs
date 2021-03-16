@@ -6,5 +6,9 @@
 
         public string FisrtName { get; set; }
         public string LastName { get; set; }
+        public override string ToString()
+        { 
+            return $"ID: {Id} Prenume: {FisrtName}  Nume: {LastName} "; 
+        }
     }
 }

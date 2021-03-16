@@ -21,14 +21,10 @@ namespace GenericsExercise.Console
             persistence.InsertAsync(university);
         }
 
-        public async static void DisplayAllUniversities()
+        public  static void DisplayAllUniversities()
         {
-            var universities = await persistence.GetAllAsync<University>();
-            foreach (var university in universities)
-            {
-                System.Console.WriteLine("Id:  "+ university.Id + " Nume: " + university.Name + " Adresa: " + university.Address); 
-                
-            }
+            DisplayToConsoleService.DisplayToConsole<University>(persistence); 
+
 
         }
 
