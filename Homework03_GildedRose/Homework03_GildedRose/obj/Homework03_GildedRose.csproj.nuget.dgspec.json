@@ -45,20 +45,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "ApprovalTests": {
-              "target": "Package",
-              "version": "[5.4.6, )"
-            },
-            "NUnit": {
-              "target": "Package",
-              "version": "[3.13.1, )"
-            },
-            "xunit.extensibility.core": {
-              "target": "Package",
-              "version": "[2.4.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

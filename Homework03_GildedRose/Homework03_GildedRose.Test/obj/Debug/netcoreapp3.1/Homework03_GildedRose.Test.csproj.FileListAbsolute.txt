@@ -1,0 +1,4 @@
+C:\Users\soare\source\repos\HomeworksCegeka\Homework03_GildedRose\Homework03_GildedRose.Test\obj\Debug\netcoreapp3.1\Homework03_GildedRose.Test.csprojAssemblyReference.cache
+C:\Users\soare\source\repos\HomeworksCegeka\Homework03_GildedRose\Homework03_GildedRose.Test\obj\Debug\netcoreapp3.1\Homework03_GildedRose.Test.AssemblyInfoInputs.cache
+C:\Users\soare\source\repos\HomeworksCegeka\Homework03_GildedRose\Homework03_GildedRose.Test\obj\Debug\netcoreapp3.1\Homework03_GildedRose.Test.AssemblyInfo.cs
+C:\Users\soare\source\repos\HomeworksCegeka\Homework03_GildedRose\Homework03_GildedRose.Test\obj\Debug\netcoreapp3.1\Homework03_GildedRose.Test.csproj.CoreCompileInputs.cache

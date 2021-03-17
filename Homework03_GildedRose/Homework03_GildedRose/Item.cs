@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Homework03_GildedRose
 {
-    class Item
+    public class Item
     {
         public string Name { get; set; }
         public int SellIn { get; set; }

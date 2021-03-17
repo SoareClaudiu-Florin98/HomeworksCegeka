@@ -7,7 +7,7 @@ namespace Homework03_GildedRose
     public class GildedRose
     {
         IList<Item> Items;
-        internal GildedRose(IList<Item> items)
+        public GildedRose(IList<Item> items)
         {
             this.Items = items;
         }
