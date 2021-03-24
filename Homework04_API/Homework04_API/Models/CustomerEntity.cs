@@ -8,7 +8,7 @@ namespace Homework04_API.Models
     public class CustomerEntity
     {
         public int Id { get; set; }
-        public List<CarEntity> Cars { get; set;  }
+        public CarEntity car { get; set;  }
         
         public string FirstName { get; set; }
         public string LastName { get; set; }
