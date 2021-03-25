@@ -11,7 +11,7 @@ namespace Homework04_API.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
-        private  static List<CarEntity> _cars = new List<CarEntity>() ; 
+        public  static List<CarEntity> _cars = new List<CarEntity>() ; 
         public CarsController()
         {
             _cars = new List<CarEntity>()

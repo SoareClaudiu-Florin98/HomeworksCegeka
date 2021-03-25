@@ -46,8 +46,12 @@ namespace Homework04_API.Controllers
         [Route("customers")]
         public IActionResult AddNewCustomer([FromBody] CustomerEntity customerModel)
         {
+            customerModel.Car = CarsController._cars.FirstOrDefault(x => x.Model == customerModel.CarModel);
+            if (customerModel.Car == null)
+            {
+                return NotFound("Masina cu acest id  nu exista !");
+            }
             _customers.Add(customerModel); 
-
             return Ok(customerModel);
 
         }
@@ -67,7 +71,14 @@ namespace Homework04_API.Controllers
                 return NotFound();
             }
             customer.Id = customerModel.Id;
-            customer.car = customerModel.car;
+            customer.CarModel = customerModel.CarModel;
+
+            customer.Car = CarsController._cars.FirstOrDefault(x => x.Model == customer.CarModel); 
+            if(customer.Car == null)
+            {
+                return NotFound("Masina cu acest id  nu exista !");
+            }
+
             customer.Email = customerModel.Email;
             customer.LastName = customerModel.LastName; 
             customer.FirstName = customerModel.FirstName; 
@@ -87,8 +98,12 @@ namespace Homework04_API.Controllers
             {
                 return NotFound();
             }
-            customer.car = carModel; 
 
+            customer.Car = CarsController._cars.FirstOrDefault(x => x.Model == customer.CarModel);
+            if (customer.Car == null)
+            {
+                return NotFound("Masina cu acest id  nu exista !");
+            }
             return Ok(customer);
         }
 
