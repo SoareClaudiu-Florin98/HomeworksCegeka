@@ -73,7 +73,7 @@ namespace Homework04_API.Controllers
             customer.Id = customerModel.Id;
             customer.CarModel = customerModel.CarModel;
 
-            customer.Car = CarsController._cars.FirstOrDefault(x => x.Model == customer.CarModel); 
+            customer.Car = CarsController._cars.FirstOrDefault(x => x.Model == customerModel.CarModel); 
             if(customer.Car == null)
             {
                 return NotFound("Masina cu acest id  nu exista !");
@@ -84,29 +84,6 @@ namespace Homework04_API.Controllers
             customer.FirstName = customerModel.FirstName; 
             return Ok(customer);
         }
-        [HttpPut]
-        [Route("customer/{id}")]
-        public IActionResult UpdateCustomerCar(long id, [FromBody] CarEntity carModel)
-        {
-            if (carModel == null)
-            {
-                return BadRequest();
-            }
-
-            var customer = _customers.FirstOrDefault(x => x.Id == id);
-            if (customer == null)
-            {
-                return NotFound();
-            }
-
-            customer.Car = CarsController._cars.FirstOrDefault(x => x.Model == customer.CarModel);
-            if (customer.Car == null)
-            {
-                return NotFound("Masina cu acest id  nu exista !");
-            }
-            return Ok(customer);
-        }
-
 
     }
 }
