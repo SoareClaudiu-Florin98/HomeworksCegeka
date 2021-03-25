@@ -24,14 +24,14 @@ namespace Homework04_API.Controllers
         }
         [HttpGet]
         [Route("customers/filter")]
-        public IActionResult GetCustomersByCarModel(string model)
+        public IActionResult GetCustomersByFirstName(string firstName)
         {
-            if (model == null)
+            if (firstName == null)
             {
                 return BadRequest();
             }
 
-            var customers = _customers.FindAll(x => x.car.Model == model);
+            var customers = _customers.FirstOrDefault(x => x.FirstName == firstName);
 
             return Ok(customers);
 
@@ -42,7 +42,15 @@ namespace Homework04_API.Controllers
         {
             return Ok(_customers.FirstOrDefault(e => e.Id == id));
         }
+        [HttpPost]
+        [Route("customers")]
+        public IActionResult AddNewCustomer([FromBody] CustomerEntity customerModel)
+        {
+            _customers.Add(customerModel); 
 
+            return Ok(customerModel);
+
+        }
 
         [HttpPut]
         [Route("customer/{id}")]
