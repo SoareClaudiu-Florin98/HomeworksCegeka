@@ -44,7 +44,7 @@ namespace Homework04_API.Controllers
         }
 
         [HttpGet]
-        [Route("car/{model}")]
+        [Route("cars/{model}")]
         public IActionResult GetCarByModel( string model)
         {
             return Ok(_cars.FirstOrDefault(e => e.Model == model)); 
@@ -53,7 +53,7 @@ namespace Homework04_API.Controllers
 
 
         [HttpPost]
-        [Route("car")]
+        [Route("cars")]
         public IActionResult AddNewCar([FromBody] CarEntity carModel)
         {
             if(carModel == null)
@@ -77,7 +77,7 @@ namespace Homework04_API.Controllers
 
         }
         [HttpPut]
-        [Route("car/{model}")]
+        [Route("cars/{model}")]
         public IActionResult UpdateCarByModel(string model , [FromBody] CarEntity carModel)
         {
             if(carModel == null)

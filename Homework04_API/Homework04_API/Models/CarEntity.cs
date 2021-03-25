@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework04_API.Models
 {
-    public class CarEntity
+    public class CarEntity:LinkResourceBase
     {       
         public string Model { get; set; }
         public string Manufacturer { get; set; }
