@@ -12,9 +12,6 @@ namespace Homework04_API.Controllers
     public class CustomerController : ControllerBase
     {
         private static List<CustomerEntity> _customers =  new List<CustomerEntity>();
-
-
-
         [HttpGet]
         [Route("customers")]
         public IActionResult GetAllCustomers()
@@ -49,7 +46,7 @@ namespace Homework04_API.Controllers
             customerModel.Car = CarsController._cars.FirstOrDefault(x => x.Model == customerModel.CarModel);
             if (customerModel.Car == null)
             {
-                return NotFound("Masina cu acest id  nu exista !");
+                return NotFound("Acest model de masina nu este pe stoc!");
             }
             _customers.Add(customerModel); 
             return Ok(customerModel);
@@ -76,7 +73,7 @@ namespace Homework04_API.Controllers
             customer.Car = CarsController._cars.FirstOrDefault(x => x.Model == customerModel.CarModel); 
             if(customer.Car == null)
             {
-                return NotFound("Masina cu acest id  nu exista !");
+                return NotFound("Acest model de masina nu este pe stoc!");
             }
 
             customer.Email = customerModel.Email;
@@ -84,6 +81,9 @@ namespace Homework04_API.Controllers
             customer.FirstName = customerModel.FirstName; 
             return Ok(customer);
         }
+
+
+
 
     }
 }
