@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Tricou",
+        "price": 1001,
+        "likeability":0,
+        "discount": 0,
+        "stock": 10
+
+    },
+    {
+        "name": "Camasa",
+        "price": 300,
+        "likeability":1,
+        "discount": 0,
+        "stock": 20
+
+    },
+    {
+        "name": "Pantaloni",
+        "price": 150,
+        "likeability":0,
+        "discount": 0,
+        "stock": 15
+
+    },
+    {
+        "name": "Geaca",
+        "price": 400,
+        "likeability":0,
+        "discount": 0,
+        "stock": 0
+        
+    }
+]

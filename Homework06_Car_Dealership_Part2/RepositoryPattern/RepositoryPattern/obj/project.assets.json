@@ -6163,11 +6163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\soare\\source\\repos\\RepositoryPattern\\RepositoryPattern\\RepositoryPattern.csproj",
+      "projectUniqueName": "C:\\Users\\soare\\source\\repos\\HomeworksCegeka\\Homework06_Car_Dealership_Part2\\RepositoryPattern\\RepositoryPattern\\RepositoryPattern.csproj",
       "projectName": "RepositoryPattern",
-      "projectPath": "C:\\Users\\soare\\source\\repos\\RepositoryPattern\\RepositoryPattern\\RepositoryPattern.csproj",
+      "projectPath": "C:\\Users\\soare\\source\\repos\\HomeworksCegeka\\Homework06_Car_Dealership_Part2\\RepositoryPattern\\RepositoryPattern\\RepositoryPattern.csproj",
       "packagesPath": "C:\\Users\\soare\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\soare\\source\\repos\\RepositoryPattern\\RepositoryPattern\\obj\\",
+      "outputPath": "C:\\Users\\soare\\source\\repos\\HomeworksCegeka\\Homework06_Car_Dealership_Part2\\RepositoryPattern\\RepositoryPattern\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

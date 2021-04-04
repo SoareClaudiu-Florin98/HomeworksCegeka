@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6NGrO9XseWkNmBZRtU4e2a2XNbaJoM93Lw0vArjbojEH0AemHZpF+Km6mWPf6z8jJexfM6VFXu/wNY+Rnkgfhw==",
+  "dgSpecHash": "eHOub0SKzuqM/kn4Af1zz3nTZaT5mgmPtRqvw/xBxVAy86MdBqUlj284P3VvgHaTnE3GU8b4gSqrUJ3uLpZLfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\soare\\source\\repos\\RepositoryPattern\\RepositoryPattern\\RepositoryPattern.csproj",
+  "projectFilePath": "C:\\Users\\soare\\source\\repos\\HomeworksCegeka\\Homework06_Car_Dealership_Part2\\RepositoryPattern\\RepositoryPattern\\RepositoryPattern.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\soare\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\soare\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
