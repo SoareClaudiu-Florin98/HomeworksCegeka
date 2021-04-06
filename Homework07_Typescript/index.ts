@@ -7,6 +7,15 @@ interface MyProduct {
     discount:number
     stock:number
 }
+interface Customer {
+    id: number
+    name:string
+}
+interface Order{
+    customer: Customer
+    quantity : number
+    products : MyProduct[]
+}
 const file = 'products.json'
 const encode = 'utf8'
 var products:MyProduct[]
@@ -55,20 +64,14 @@ function addDiscountBasedOnLikeability(likeability:number){
     })
 
 }
-interface Customer {
-    id: number
-    name:string
-}
-interface Order{
-    customer: Customer
-    quantity : number
-}
+
 var orders :Order[] = new Array(); 
-function placeOrder(customer: Customer, quantity: number){
-    let myCustomer: Customer = {id:0 , name: 'Claudiu'} ; 
-    let order:Order = {customer: myCustomer, quantity:0} ; 
+function placeOrder(customer: Customer, quantity: number, productsParams: MyProduct[]){
+    let myCustomer: Customer = {id:0 , name: 'unknown'} ; 
+    let order:Order = {customer: myCustomer, quantity:0,products} ; 
     order.customer = customer ; 
     order.quantity= quantity ;
+    order.products = productsParams;
     orders.push(order) ;   
 }
 function refillStockforSoldOutProduct(myproduct : MyProduct, refillNumber){
@@ -93,8 +96,8 @@ setTimeout(function(){addDiscountBasedOnLikeability(2)}, 200);
 setTimeout(displayAvailibleStock, 200);
 let testCustomer :Customer= {id:1 ,name: "Andrei"} ; 
 let testCustomer2 :Customer= {id:2 ,name: "Dragos"} ; 
-setTimeout(function(){placeOrder(testCustomer,10)},200)
-setTimeout(function(){placeOrder(testCustomer2,20)},200)
+setTimeout(function(){placeOrder(testCustomer,10,products)},200)
+setTimeout(function(){placeOrder(testCustomer2,20,products)},200)
 setTimeout(function() {console.log(orders)}, 200) ; 
 setTimeout(function(){refillStockforSoldOutProduct(products[3],20)}, 200);
 setTimeout(displayAvailibleStock, 200);

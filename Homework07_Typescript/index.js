@@ -48,11 +48,12 @@ function addDiscountBasedOnLikeability(likeability) {
     });
 }
 var orders = new Array();
-function placeOrder(customer, quantity) {
-    var myCustomer = { id: 0, name: 'Claudiu' };
-    var order = { customer: myCustomer, quantity: 0 };
+function placeOrder(customer, quantity, productsParams) {
+    var myCustomer = { id: 0, name: 'unknown' };
+    var order = { customer: myCustomer, quantity: 0, products: products };
     order.customer = customer;
     order.quantity = quantity;
+    order.products = productsParams;
     orders.push(order);
 }
 function refillStockforSoldOutProduct(myproduct, refillNumber) {
@@ -76,8 +77,8 @@ setTimeout(function () { addDiscountBasedOnLikeability(2); }, 200);
 setTimeout(displayAvailibleStock, 200);
 var testCustomer = { id: 1, name: "Andrei" };
 var testCustomer2 = { id: 2, name: "Dragos" };
-setTimeout(function () { placeOrder(testCustomer, 10); }, 200);
-setTimeout(function () { placeOrder(testCustomer2, 20); }, 200);
+setTimeout(function () { placeOrder(testCustomer, 10, products); }, 200);
+setTimeout(function () { placeOrder(testCustomer2, 20, products); }, 200);
 setTimeout(function () { console.log(orders); }, 200);
 setTimeout(function () { refillStockforSoldOutProduct(products[3], 20); }, 200);
 setTimeout(displayAvailibleStock, 200);
