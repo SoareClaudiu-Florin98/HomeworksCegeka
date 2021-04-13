@@ -99,16 +99,14 @@ class Main extends React.Component {
             </Message>
         }
         
-        return(                 
+        return(              
             <Switch>
-                <Route exact path="/" >
-                <Login/>
-                </Route>
-                <Route  path="/albums" render = {albumList}/>
-                <Route  path="/photos" render = {photoList}/>
-                <Route  path="/login" render = {<Login/>}/>
+                <Route exact path="/" component= {Login} />
+                <Route   path="/albums" render = {albumList}/>
+                <Route   path="/photos" render = {photoList}/>
+                <Route   path="/login" render = {<Login/>}/>
                 <Route rander = {error}/>
-            </Switch>            
+            </Switch>           
         ) ; 
     }
  }

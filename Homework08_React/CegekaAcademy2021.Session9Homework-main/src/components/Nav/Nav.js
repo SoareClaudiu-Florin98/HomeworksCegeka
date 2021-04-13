@@ -31,9 +31,7 @@ class Nav extends React.Component {
     );
   };
   render() {
-    return (
-      <Router>
-        <div>     
+    return (        
       <Menu tabular >
         <Menu.Item>
           <Header
@@ -47,11 +45,7 @@ class Nav extends React.Component {
         {Object.keys(menuItems).map((item) => {
           return this.randerMenuItems(menuItems[item]);
         })}         
-      </Menu> 
-      <Main/>  
-      </div> 
-      </Router>
-      
+      </Menu>      
     );
   }
 }
