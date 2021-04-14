@@ -26,7 +26,7 @@ const AlbumList= (props) =>{
                 >
                     <Button icon>
                         <WithLightbox
-                            photo= {albumPhotos}>
+                            photos= {albumPhotos}>
                             <Icon name = 'play'/>
                         </WithLightbox>
                     </Button>
@@ -54,12 +54,13 @@ const AlbumList= (props) =>{
                 <AlbumForm
                 formType= 'New'
                 photos = {photos}
-                createAlbum={createAlbum}>
+                createAlbum={createAlbum}>                   
                 </AlbumForm>
+                </StatusBar>
                 <Card.Group itemsPerRow = {4} doubling>
                     {renderAlbums()}
                 </Card.Group>
-            </StatusBar>
+            
 
 
         </div>

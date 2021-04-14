@@ -1,6 +1,7 @@
 import React from 'react' ; 
 import PropTypes from 'prop-types';
 import {Modal, Form, Button, Icon, Message} from 'semantic-ui-react';
+import   './AlbumForm.css'
 class AlbumForm extends React.Component {
     state = {
         error: false,
@@ -68,12 +69,15 @@ class AlbumForm extends React.Component {
                 image: {avatar: true, src: photo.url}
             }
         }); 
-        return(<Modal
-            triggers={
+
+        return(<Modal className="myModal"
+            trigger={
             <Button icon onClick={this.showForm}>
-                <Icon name={this.isNewForm()?'add':'edit'} />
+                <Icon name={this.isNewForm()?'plus':'pencil alternate'} />
             </Button>        
         }
+        centered={true}
+        size= 'small'
         closeIcon
         open = {modalOpen}
         onClose = {this.closeForm}>
@@ -91,7 +95,7 @@ class AlbumForm extends React.Component {
                     label ="Name"
                     placeholder = "Album name"
                     defaultValue = {this.isNewForm()? '':album.name}
-                    onchange={(e) => this.handleInputChange(e.target.name, e.targer.value)}
+                    onChange={(e) => this.handleInputChange(e.target.name, e.targer.value)}
                     required>
                     </Form.Input>
                     <Form.TextArea
@@ -99,7 +103,7 @@ class AlbumForm extends React.Component {
                     label = "Description"
                     placeholder = "Tell more about this album..."
                     defaultValue = {this.isNewForm()? '':album.description}
-                    onchange={(e) => this.handleInputChange(e.target.name, e.targer.value)}
+                    onChange={(e) => this.handleInputChange(e.target.name, e.targer.value)}
                     required>
                     </Form.TextArea>
                     <Form.Input
@@ -107,7 +111,7 @@ class AlbumForm extends React.Component {
                     label ="Tags"
                     placeholder = "Enter tags separed bu '|'"
                     defaultValue = {this.isNewForm()? '':album.tags.join('|')}
-                    onchange={(e) => this.handleInputChange(e.target.name, e.targer.value.split('|'))}
+                    onChange={(e) => this.handleInputChange(e.target.name, e.targer.value.split('|'))}
                     required
                     icon ='tags'
                     iconPosition ='left'>
@@ -117,14 +121,13 @@ class AlbumForm extends React.Component {
                     label ="Photos"
                     placeholder = "Select photos for this album"
                     defaultValue = {this.isNewForm()?'':album.photosIds}
-                    onchange={(e,data) => this.handleInputChange(data.name, data.value)}
+                    onChange={(e,data) => this.handleInputChange(data.name, data.value)}
                     required 
                     fluid 
                     multiple
                     selection
                     options={options}>
                     </Form.Dropdown>
-
                 </Form>       
 
             </Modal.Content>

@@ -1,5 +1,5 @@
 import React from "react";
-import {Switch, Route , BrowserRouter} from  'react-router-dom'; 
+import {Switch, Route } from  'react-router-dom'; 
 import * as api from '../../api' ; 
 import AlbumList from '../Album/AlbumList'; 
 import PhotoList from '../Photo/PhotoList'; 
@@ -8,12 +8,12 @@ import {Message} from 'semantic-ui-react' ;
 class Main extends React.Component {
     state = {
         albums : {},
-        photos: {},
+        photos: {}
     }
     
     componentWillMount(){
-        const localStorageAlbums = localStorage.getItem("albums") ;
-        const localStoragePhotos = localStorage.getItem("photos") ; 
+        const localStorageAlbums = localStorage.getItem('albums') ;
+        const localStoragePhotos = localStorage.getItem('photos') ; 
         if(localStorageAlbums && localStoragePhotos){
             this.setState({
             albums : JSON.parse(localStorageAlbums),
@@ -29,10 +29,11 @@ class Main extends React.Component {
             );
         }
     }
-    componentWillUpdate(nextState){
+    componentWillUpdate(nextProps,nextState){
 
-        localStorage.setItem('photos', JSON.stringify(nextState.photos)) ;
         localStorage.setItem('albums', JSON.stringify(nextState.albums)) ; 
+        localStorage.setItem('photos', JSON.stringify(nextState.photos)) ;
+
  
     }
     createAlbum = (album) => {
@@ -72,39 +73,25 @@ class Main extends React.Component {
     render(){
         const {albums,photos} = this.state ; 
 
-        const photoList = ()=>{ 
-
-            <PhotoList
-            photos ={photos}
-            deletePhoto= {this.deletePhoto}
-            editPhoto = {this.editPhoto}
-            createPhoto= {this.createPhoto}>
-            </PhotoList>
-
-        } 
-
-        const albumList = ()=>{ 
+        const albumList = ()=>
             <AlbumList
             albums ={albums}
             photos={photos}
             deleteAlbum= {this.deleteAlbum}
             editAlbum = {this.editAlbum}
-            createAlbum = {this.createAlbum}>
-            </AlbumList>
-        } 
-        const error =()=> {
+            createAlbum = {this.createAlbum}/>
+        ; 
+        const error =()=> 
             <Message icon = 'warning circle'
             header = 'Ups...Error' 
-            content ='please go back and try again.'>
-            </Message>
-        }
-        
+            content ='please go back and try again.'/>
+            console.log(albumList);           
         return(              
             <Switch>
-                <Route exact path="/" component= {Login} />
+                <Route exact path="/" render = {() => <Login/>} />
                 <Route   path="/albums" render = {albumList}/>
-                <Route   path="/photos" render = {photoList}/>
-                <Route   path="/login" render = {<Login/>}/>
+                <Route   path="/photos" render = { () => <div>In progress...</div>}/>
+                <Route   path="/login" render = {() =><Login/>}/>
                 <Route rander = {error}/>
             </Switch>           
         ) ; 

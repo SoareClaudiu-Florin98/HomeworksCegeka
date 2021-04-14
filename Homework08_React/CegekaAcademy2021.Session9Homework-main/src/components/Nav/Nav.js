@@ -1,7 +1,7 @@
 import React from "react";
-import { NavLink ,BrowserRouter as Router,Switch} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Header, Menu } from 'semantic-ui-react';
-import Main from '../Main/Main' ; 
+
 const menuItems = [
   {
     name: "albums",
@@ -36,7 +36,7 @@ class Nav extends React.Component {
         <Menu.Item>
           <Header
             as="h2"
-            icon="images"
+            icon="image"
             floated="right"
             textAlign="center"
             color="blue"

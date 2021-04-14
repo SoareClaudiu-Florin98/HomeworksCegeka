@@ -1,4 +1,3 @@
-/// This is the enhance component
 import React from 'react';
 import PropTypes from 'prop-types';
 import Lightbox from 'react-images';

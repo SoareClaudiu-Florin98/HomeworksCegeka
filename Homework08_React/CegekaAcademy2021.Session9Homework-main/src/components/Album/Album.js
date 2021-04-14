@@ -36,9 +36,9 @@ return (
                 </Image.Group>
             </Card.Content>
             <Card.Content>
-                <Card.description as = "p">
+                <Card.Description as = "p">
                     {album.description}
-                </Card.description>
+                </Card.Description>
                 <Card.Meta>
                     <Label.Group  tag size = "mini">
                         {renderTags()}
