@@ -75,11 +75,10 @@ function placeOrder(customer: Customer, quantity: number, productsParams: MyProd
     orders.push(order) ;   
 }
 function refillStockforSoldOutProduct(myproduct : MyProduct, refillNumber){
-    products.find(product =>{
-        if(product.name ===myproduct.name){
-            if(product.stock <= 0){
-                product.stock = refillNumber ; 
-            }
+    products.find(product =>
+    {
+        if(product.name ===myproduct.name && product.stock <= 0){           
+            product.stock = refillNumber ;             
         }
     })
 }
