@@ -37,7 +37,7 @@ const AlbumList= (props) =>{
                         photos={photos}
                         editAlbum={editAlbum}>
                     </AlbumForm>
-                    <DeleteButton
+                    <DeleteButton className="deleteBtn"
                         index={key}
                         objectName={album.name}
                         deleteObject={deleteAlbum}>

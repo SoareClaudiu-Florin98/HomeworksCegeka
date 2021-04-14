@@ -51,7 +51,7 @@ class Main extends React.Component {
     deleteAlbum = (key) => {
         let albums = this.state.albums ; 
         delete albums[key];
-        this.setstate({albums}) ;
+        this.setState({albums}) ;
     }
     createPhoto = (photo) => {
         let photos= this.state.photos ; 

@@ -38,12 +38,12 @@ class AlbumForm extends React.Component {
             return ; 
         }
         this.setState({ error: false}) ; 
-        const {updateAlbum, createAlbum, index}= this.props ; 
+        const {editAlbum, createAlbum, index}= this.props ; 
         const {album} = this.state ; 
         if( this.isNewForm()){
             createAlbum(album) ; 
         }else{
-            updateAlbum(index,album); 
+            editAlbum(index,album); 
         }
         this.closeForm() ; 
 
@@ -95,7 +95,7 @@ class AlbumForm extends React.Component {
                     label ="Name"
                     placeholder = "Album name"
                     defaultValue = {this.isNewForm()? '':album.name}
-                    onChange={(e) => this.handleInputChange(e.target.name, e.targer.value)}
+                    onChange={(e) => this.handleInputChange(e.target.name, e.target.value)}
                     required>
                     </Form.Input>
                     <Form.TextArea
@@ -103,7 +103,7 @@ class AlbumForm extends React.Component {
                     label = "Description"
                     placeholder = "Tell more about this album..."
                     defaultValue = {this.isNewForm()? '':album.description}
-                    onChange={(e) => this.handleInputChange(e.target.name, e.targer.value)}
+                    onChange={(e) => this.handleInputChange(e.target.name, e.target.value)}
                     required>
                     </Form.TextArea>
                     <Form.Input
@@ -111,7 +111,7 @@ class AlbumForm extends React.Component {
                     label ="Tags"
                     placeholder = "Enter tags separed bu '|'"
                     defaultValue = {this.isNewForm()? '':album.tags.join('|')}
-                    onChange={(e) => this.handleInputChange(e.target.name, e.targer.value.split('|'))}
+                    onChange={(e) => this.handleInputChange(e.target.name, e.target.value.split('|'))}
                     required
                     icon ='tags'
                     iconPosition ='left'>
@@ -146,4 +146,4 @@ class AlbumForm extends React.Component {
     }
 
 }
-export default AlbumForm ; 
+export default AlbumForm ;
