@@ -81,6 +81,12 @@ class Main extends React.Component {
             editAlbum = {this.editAlbum}
             createAlbum = {this.createAlbum}/>
         ; 
+        const photoList = () => <PhotoList       
+        photos = {photos}
+        deletePhoto= {this.deletePhoto}
+        editPhoto= {this.editPhoto}
+        createPhoto = {this.createPhoto}
+        />
         const error =()=> 
             <Message icon = 'warning circle'
             header = 'Ups...Error' 
@@ -90,7 +96,7 @@ class Main extends React.Component {
             <Switch>
                 <Route exact path="/" render = {() => <Login/>} />
                 <Route   path="/albums" render = {albumList}/>
-                <Route   path="/photos" render = { () => <div>In progress...</div>}/>
+                <Route   path="/photos" render = { photoList}/>
                 <Route   path="/login" render = {() =><Login/>}/>
                 <Route rander = {error}/>
             </Switch>           
