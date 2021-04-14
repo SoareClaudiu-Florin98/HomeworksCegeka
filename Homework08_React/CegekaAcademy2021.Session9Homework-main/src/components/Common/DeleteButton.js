@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Button, Confirm } from 'semantic-ui-react';
+import './DeleteButton.css'
 
 class DeleteButton extends React.Component {
   state = {
@@ -28,7 +29,7 @@ class DeleteButton extends React.Component {
     const { deleteConfirmOpen } = this.state;
 
     return (
-      <Button icon onClick={() => this.handleDelete(index)}>
+      <Button  icon onClick={() => this.handleDelete(index)}>
         <Icon name='trash' /> 
         {deleteConfirmOpen && 
           <Confirm 

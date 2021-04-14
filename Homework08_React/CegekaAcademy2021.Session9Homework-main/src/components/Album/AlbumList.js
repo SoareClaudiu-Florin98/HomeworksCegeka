@@ -4,7 +4,7 @@ import Album from '../Album/Album'
 import AlbumForm from '../Album/AlbumForm' 
 import {Card,Button, Icon} from 'semantic-ui-react'
 import StatusBar from '../StatusBar/StatusBar' ; 
-import {WithLightbox , DeleteButton} from '../Common'
+import {WithLightbox , DeleteButton} from '../Common';
 
 const AlbumList= (props) =>{
     const {albums , photos, deleteAlbum, editAlbum, createAlbum} = props ; 
@@ -37,7 +37,7 @@ const AlbumList= (props) =>{
                         photos={photos}
                         editAlbum={editAlbum}>
                     </AlbumForm>
-                    <DeleteButton className="deleteBtn"
+                    <DeleteButton 
                         index={key}
                         objectName={album.name}
                         deleteObject={deleteAlbum}>
