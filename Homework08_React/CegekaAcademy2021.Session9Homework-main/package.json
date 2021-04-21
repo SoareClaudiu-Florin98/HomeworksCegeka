@@ -8,6 +8,8 @@
     "url": "https://twitter.com/agzertuche"
   },
   "dependencies": {
+    "fbjs": "^0.8.16",
+    "jest-enzyme": "^7.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -18,10 +20,10 @@
     "react-scripts": "1.0.14",
     "redux": "^4.0.5",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.75.1",
-    "fbjs": "^0.8.16"
+    "semantic-ui-react": "^0.75.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.6",
     "babel-eslint": "^7.2.3",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
@@ -29,7 +31,8 @@
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.4.0",
-    "react-test-renderer": "^16.0.0"
+    "jest-dom": "^4.0.0",
+    "react-test-renderer": "^16.14.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -20,7 +20,7 @@ const setup = (path) => {
 
 describe('Main', () => {
   it('should render page not found', () => {
-    const { component } = setup('/asdf');
+    const { component } = setup('/gdfgdf');
     expect(component.find(Message)).toHaveLength(1);
   });
 
