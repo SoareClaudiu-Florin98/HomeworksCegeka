@@ -1,6 +1,8 @@
 import React from 'react' ; 
 import PropTypes from 'prop-types';
 import {Modal, Form, Button, Icon, Message} from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import * as photoActions from '../../actions/photoActions';
 class PhotoForm extends React.Component {
     state = {
         error: false,
@@ -36,12 +38,12 @@ class PhotoForm extends React.Component {
             return ; 
         }
         this.setState({ error: false}) ; 
-        const {editPhoto, createPhoto, index}= this.props ; 
+        const {updatePhoto, createPhoto, index}= this.props ; 
         const {photo} = this.state ; 
         if( this.isNewForm()){
             createPhoto(photo) ; 
         }else{
-            editPhoto(index,photo); 
+            updatePhoto(index,photo); 
         }
         this.closeForm() ; 
 
@@ -118,4 +120,17 @@ class PhotoForm extends React.Component {
     }
 
 }
-export default PhotoForm ;
+const mapStateToProps = (state) => {
+    return {
+      photos: state.photos,
+    }
+  }
+  
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      createPhoto: photo => dispatch(photoActions.addPhoto(photo)),
+      updatePhoto: (key, photo) => dispatch(photoActions.updatePhoto(key, photo)),
+    }
+  }
+  
+export default connect(mapStateToProps, mapDispatchToProps)(PhotoForm);

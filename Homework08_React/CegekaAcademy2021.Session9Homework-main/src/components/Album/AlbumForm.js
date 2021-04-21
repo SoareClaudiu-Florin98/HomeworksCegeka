@@ -1,7 +1,9 @@
 import React from 'react' ; 
 import PropTypes from 'prop-types';
 import {Modal, Form, Button, Icon, Message} from 'semantic-ui-react';
-import   './AlbumForm.css'
+import   './AlbumForm.css';
+import { connect } from 'react-redux';
+import * as albumActions from '../../actions/albumActions';
 class AlbumForm extends React.Component {
     state = {
         error: false,
@@ -38,12 +40,12 @@ class AlbumForm extends React.Component {
             return ; 
         }
         this.setState({ error: false}) ; 
-        const {editAlbum, createAlbum, index}= this.props ; 
+        const {updateAlbum, createAlbum, index}= this.props ; 
         const {album} = this.state ; 
         if( this.isNewForm()){
             createAlbum(album) ; 
         }else{
-            editAlbum(index,album); 
+            updateAlbum(index,album); 
         }
         this.closeForm() ; 
 
@@ -146,4 +148,18 @@ class AlbumForm extends React.Component {
     }
 
 }
-export default AlbumForm ;
+const mapStateToProps = (state) => {
+    return {
+      albums: state.albums,
+      photos: state.photos,
+    }
+  }
+  
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      createAlbum: album => dispatch(albumActions.addAlbum(album)),
+      updateAlbum: (key, album) => dispatch(albumActions.updateAlbum(key, album)),
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(AlbumForm);

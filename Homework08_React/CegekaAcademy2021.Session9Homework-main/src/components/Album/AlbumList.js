@@ -5,6 +5,8 @@ import AlbumForm from '../Album/AlbumForm'
 import {Card,Button, Icon} from 'semantic-ui-react'
 import StatusBar from '../StatusBar/StatusBar' ; 
 import {WithLightbox , DeleteButton} from '../Common';
+import { connect } from 'react-redux';
+import * as albumActions from '../../actions/albumActions';
 
 const AlbumList= (props) =>{
     const {albums , photos, deleteAlbum, editAlbum, createAlbum} = props ; 
@@ -74,4 +76,17 @@ AlbumList.propTypes ={
     editAlbum: PropTypes.func.isRequired,
     createAlbum: PropTypes.func.isRequired,
 }; 
-export default  AlbumList; 
+const mapStateToProps = (state) => {
+    return {
+      albums: state.albums,
+      photos: state.photos,
+    }
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+      deleteAlbum: key => dispatch(albumActions.deleteAlbum(key)),
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(AlbumList);

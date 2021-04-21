@@ -5,6 +5,8 @@ import StatusBar from '../StatusBar/StatusBar' ;
 import { DeleteButton} from '../Common';
 import PhotoForm from '../Photo/PhotoForm' ; 
 import Photo from '../Photo/Photo' ; 
+import { connect } from 'react-redux';
+import * as photoActions from '../../actions/photoActions';
 const PhotoList= (props) =>{
     const {photos, deletePhoto, editPhoto, createPhoto} = props ; 
     console.log(props) ; 
@@ -55,4 +57,16 @@ PhotoList.propTypes ={
     editPhoto: PropTypes.func.isRequired,
     createPhoto: PropTypes.func.isRequired,
 }; 
-export default  PhotoList; 
+const mapStateToProps = (state) => {
+    return {
+      photos: state.photos,
+    }
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+      deletePhoto: key => dispatch(photoActions.deletePhoto(key)),
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(PhotoList);
