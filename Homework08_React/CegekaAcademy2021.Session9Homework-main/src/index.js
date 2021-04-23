@@ -4,7 +4,7 @@ import App from './components/App';
 import 'semantic-ui-css/semantic.min.css';
 import {BrowserRouter} from  'react-router-dom'; 
 import registerServiceWorker from './registerServiceWorker';
-import configureStore from './store/configureStore';
+import configureStore from './Store/configureStore';
 const store = configureStore();
 
 ReactDOM.render(
